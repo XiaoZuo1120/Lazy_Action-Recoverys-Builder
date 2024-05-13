@@ -151,6 +151,7 @@ jobs:
       run: |
         cd android-recovery
         git clone https://github.com/LineageOS/android_external_nano.git external/nano -b cm-14.1
+        git clone https://github.com/LineageOS/android_external_libncurses.git external/libncurses -b cm-14.1
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ env.DEVICE_MAKEFILE }}-eng && mka ${{ github.event.inputs.BUILD_TARGET }}
