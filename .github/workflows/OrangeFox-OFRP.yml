@@ -84,6 +84,11 @@ jobs:
       
     - name: Build Environment
       run: |
+        sudo apt update
+        sudo apt upgrade
+        sudo apt remove openjdk*
+        sudo apt install openssl
+        sudo apt install libssl-dev
         sudo apt install aria2 -y
         git clone https://gitlab.com/OrangeFox/misc/scripts
         cd scripts
