@@ -151,6 +151,7 @@ jobs:
       run: |
         cd android-recovery
         git clone https://github.com/LineageOS/android_external_nano.git external/nano -b cm-13.0
+        git clone https://github.com/LineageOS/android_external_openssh.git external/openssh -b cm-13.0
         git clone https://github.com/LineageOS/android_external_libncurses.git external/libncurses -b cm-13.0
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
