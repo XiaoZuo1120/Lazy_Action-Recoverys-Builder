@@ -157,7 +157,8 @@ jobs:
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ env.DEVICE_MAKEFILE }}-eng && mka ${{ github.event.inputs.BUILD_TARGET }}
-
+      continue-on-error: true
+      
     - name: Check Build Makefile
       run: |
         cd android-recovery
